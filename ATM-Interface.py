@@ -1,8 +1,8 @@
-user_id = "prerna"
-pin= 2468
+user_id = "user ID"
+pin= 9294 #user pin
 user = str(input("Enter your user ID: \n"))
 user_pin = int(input("Enter the four digit pin: \n"))
-balance = 50000
+balance = 500000
 transcation_history= {'11-4-2024' : 2000,
                       '10-4-2024' : 100000,
                       '09-4-2024': 200,
@@ -10,9 +10,11 @@ transcation_history= {'11-4-2024' : 2000,
                       '07-4-2024': 499,
                       '06-4-2024': 10,
                       '04-4-2024' : 849 }
-if user == user_id and pin == user_pin:
+if user == user_id && pin == user_pin:
     while True:
         print("WELCOME TO SWISS BANK")
+        print("============================================================================================================================================")
+
         print("""
             1 == Transaction History
             2 == Withdraw
@@ -20,6 +22,7 @@ if user == user_id and pin == user_pin:
             4 == Transfer
             5 == Quit
             """)
+        print("============================================================================================================================================")
         try:
             option = int(input("Choose the service number: \n"))
         except:
@@ -35,7 +38,7 @@ if user == user_id and pin == user_pin:
             print(f"{amt} is debited from your account")
             add = (input("Display the current balance Y/N: \n"))
             if add == "Y":
-                print("The current balance is : \n",dpt_balance)
+                print("The current balance is : \n",dt_balance)
                 
             elif add == "N":
                 print("Thank You Visit again")
@@ -44,13 +47,13 @@ if user == user_id and pin == user_pin:
             print("============================================================================================================================================") 
         if option == 3:
             dpt= int(input("Enter the amount to be deposited: \n"))
-            dpt_balance= (balance + dpt)
+            dpt_balance= (balance + dt)
             print(f"{dpt} has been cerdited successfully to your account")
             add = (input("Display the current balance Y/N: \n"))
-            if add == "Y":
+            if add == "y":
                 print("The current balance is : \n",dpt_balance)
                 
-            elif add == "N":
+            elif add == "n":
                 print("Thank You Visit again")
             print("============================================================================================================================================")
             print("============================================================================================================================================")
@@ -67,13 +70,13 @@ if user == user_id and pin == user_pin:
                 print(" Enter a valid transfer mode number: \n")
             if opt == 1:
                     tf= int(input("Enter the amount to be tranferred: \n"))
-                    tf_balance= (balance+ tf)
+                    tf_balance= (balance+ f)
                     print(f"{tf} has been successfully tranferred to your account")
                     add = (input("Display the current balance Y/N: \n"))
-                    if add == "Y":
+                    if add == "y":
                         print("The current balance is : \n",tf_balance)
                 
-                    elif add == "N":
+                    elif add == "n":
                         print("Thank You Visit again")
                     print("============================================================================================================================================")
                     print("============================================================================================================================================")
@@ -83,7 +86,7 @@ if user == user_id and pin == user_pin:
                     user_pin = int(input("Enter the four digit pin: \n"))
                     if user_pin == pin:
                             print(f"You have successfully transferred the{tf} to {user2}")
-                            at_balance = (balance - tf)
+                            at_balance = (balance -f)
                             add = (input("Display the current balance Y/N: \n"))
                             if add == "Y":
                                 print("The current balance is : \n",at_balance)
@@ -99,6 +102,7 @@ if user == user_id and pin == user_pin:
             
         if option == 5:
             break
+        print("THANK YOU, VISIT AGAIN")
         print("============================================================================================================================================")
         print("============================================================================================================================================")
 
